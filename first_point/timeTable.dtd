@@ -1,0 +1,14 @@
+<!ELEMENT timeTable (complexes, lessons)>
+<!ELEMENT complexes (complex+)>
+<!ELEMENT lessons (lesson+)>
+<!ELEMENT complex (name, address)>
+<!ATTLIST complex
+    code ID #REQUIRED>
+<!ELEMENT lesson (date, time)>
+<!ATTLIST lesson
+    no CDATA #REQUIRED
+    complex IDREF #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
